@@ -1,8 +1,7 @@
+// функцию создания туду которая приниает в сеья объект с данными
 export function createTodo({ title, description, dueDate, priority }) {
-  let done = false;
+  //создаем уникальный id
   const id = crypto.randomUUID();
-  const toggle = () => {
-    done = !done;
-  };
-  return { toggle, title, description, dueDate, priority, done, id };
+
+  return { title, description, dueDate, priority, id };
 }

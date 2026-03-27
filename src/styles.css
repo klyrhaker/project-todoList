@@ -4,7 +4,7 @@
   --text-color: white;
   --bg-color: green;
   --shadow-text: 1px 1px 2px lightblue;
-  --shadow-box: 2px 2px 2px brown;
+  --shadow-box: 1px 1px 9px rgb(65, 69, 68);
   --button-color: rgb(81, 81, 232);
 
   /*размеры шрифта*/
@@ -28,46 +28,86 @@
   padding: 0;
 }
 
-#form-project {
-  grid-area: "form-project";
-  margin-left: var(--fs-lg);
-  justify-self: start;
-  background-color: var(--bg-color);
+body {
+  background-color: rgb(166, 217, 219);
   display: flex;
-  justify-content: space-between;
-  align-items: start;
-  width: clamp(250px, 15vw, 600px);
-  height: clamp(150px, 20vh, 800px);
+  gap: var(--spasing-md);
+}
+#project-box {
+  box-shadow: var(--shadow-box);
+  background-color: rgb(143, 205, 207);
+  height: 100vh;
+  width: 35vw;
+}
+#form-box {
+  box-shadow: var(--shadow-box);
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  justify-content: center;
+
+  align-self: center;
+  border-radius: var(--spasing-lg);
+  height: 50vh;
+  width: 30vw;
+  background-color: rgb(45, 167, 176);
 }
 #form-todo {
-  grid-area: "form-todo";
   display: flex;
-
   flex-flow: column wrap;
-  width: clamp(400px, 40vw, 600px);
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: 80%;
+  height: 80%;
 }
-#form-todo button {
-  padding: 4px;
-  color: var(--text-color);
-  align-self: start;
-  background-color: var(--button-color);
+#box {
+  box-shadow: var(--shadow-box);
+  background-color: rgb(143, 205, 207);
+  height: 100vh;
+  width: 35vw;
 }
-#done {
-  align-self: start;
+.form-el {
+  background-color: rgb(142, 225, 60);
+  border: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--spasing-lg);
+}
+.delete {
+  background-color: red;
+}
+.edit-btn {
+  background-color: chocolate;
 }
 #side-bar {
-  margin-left: var(--fs-lg);
-  justify-self: start;
-  grid-area: "side-bar";
-}
-body {
-  background-color: var(--bg-color);
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-flow: column wrap;
   align-items: center;
-  grid-template-columns: clamp(200px, 30vw, 500px), 1fr;
-  grid-template-rows: minmax(150px, 1fr), minmax(200px, 2fr);
-  grid-template-areas:
-    "form-project form-todo"
-    "side-bar side-bar";
+  justify-content: start;
+  gap: var(--spacing-sm);
+  height: 100vh;
+}
+.project-container {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  gap: var(--spasing-lg);
+  width: 80%;
+  height: 80%;
+}
+.todo-item {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+
+  height: 100%;
+}
+.btn-todo-box {
+  flex-flow: wrap row-reverse;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-todo {
+  width: 48%;
 }

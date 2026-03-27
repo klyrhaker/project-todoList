@@ -5,7 +5,7 @@ import {
   renderSelectOptions,
   handleSelectOptions,
   deleteProjectHandle,
-  handleFilters,
+  editTodoHandle,
 } from "./render/controller.js";
 import { createProject } from "./core/project.js";
 import { renderProject } from "./render/render-project.js";
@@ -18,8 +18,9 @@ function createDefault() {
   return createProject("General");
 }
 
+// создаем функцию загрузки данных из localstorage
 function storageLoad() {
-  const projects = loadState();
+  const projects = loadState(); // берем все объекты из localStorage
 
   if (projects.length === 0) {
     // 1. Создаем General, если пусто
@@ -52,6 +53,7 @@ function storageLoad() {
   }
 }
 
+editTodoHandle();
 handleTodo();
 storageLoad();
 deleteProjectHandle();
