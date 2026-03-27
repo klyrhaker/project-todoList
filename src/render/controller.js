@@ -180,11 +180,11 @@ function deleteTodo() {
         const projects = state[i]; // на каждой итерации создаем проект из стейта
 
         for (let todo of projects.arr) {
-          // добавляем еще один сикл чтобы пройтись по туду в проекте
+          // добавляем еще один цикл чтобы пройтись по туду в проекте
           if (id === todo.id) {
             // если датасет кнопки равен id туду из проекта то
             projects.removeTodo(todo); // удаляем это туду из проекта
-            e.target.closest("div").remove(); // удаляем див с этим туду
+            e.target.closest(".todo-item").remove(); // удаляем див с этим туду
             saveState(getState()); // сохраняем текущее state в localStorage
             break; // останавливаем цикл
           }
