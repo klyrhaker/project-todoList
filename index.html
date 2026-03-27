@@ -6,36 +6,51 @@
     <title>Document</title>
   <script defer src="bundle.js"></script></head>
   <body>
-    <form id="form-project">
-      <select id="select-project"></select>
-      <input type="text" id="project-name" placeholder="name project" />
-    </form>
-    <form id="form-todo">
-      <input id="title" type="text" name="title" placeholder="title" required />
-      <input
-        id="due-date"
-        type="date"
-        name="due-date"
-        placeholder="data"
-        required
-      />
-      <textarea
-        id="description"
-        name="description"
-        placeholder="description"
-        required
-      ></textarea>
-
-      <select id="select-todo">
-        <option id="priority1" value="low">low</option>
-        <option id="priority2" value="medium">Medium</option>
-        <option id="priority3" value="high">High</option>
-        <input id="done" type="checkbox" name="done" />
-      </select>
-
-      <button type="submit" id="add">ADD</button>
-    </form>
-
-    <div id="side-bar"></div>
+    <div id="project-box">
+      <form id="form-project">
+        <select class="form-el" id="select-project"></select>
+        <input
+          class="form-el"
+          type="text"
+          id="project-name"
+          placeholder="name project"
+        />
+      </form>
+    </div>
+    <div id="form-box">
+      <h1>KLYRH_TODO</h1>
+      <form id="form-todo">
+        <input
+          class="form-el"
+          id="title"
+          type="text"
+          name="title"
+          placeholder="title"
+          required
+        />
+        <input
+          class="form-el"
+          id="due-date"
+          type="date"
+          name="due-date"
+          placeholder="data"
+          required
+        />
+        <textarea
+          class="form-el"
+          id="description"
+          name="description"
+          placeholder="description"
+          required
+        ></textarea>
+        <select class="form-el" id="select-todo">
+          <option id="priority1" value="low">low</option>
+          <option id="priority2" value="medium">Medium</option>
+          <option id="priority3" value="high">High</option>
+        </select>
+        <button class="form-el" type="submit" id="add">ADD</button>
+      </form>
+    </div>
+    <div id="box"><div id="side-bar"></div></div>
   </body>
 </html>
