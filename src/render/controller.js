@@ -239,7 +239,7 @@ function editTodoHandle() {
 
     if (!enable) {
       // если false то находим родительский див кликнутой кнопки
-      const todoEl = e.target.closest("div");
+      const todoEl = e.target.closest(".todo-item");
       const editTable = todoEl.querySelectorAll(".editable"); //находим все элементы в диве с классом editable
       for (let edit of editTable) {
         edit.disabled = false; // делаем их редактируемыми
@@ -254,7 +254,7 @@ function editTodoHandle() {
           if (id === todo.id) {
             // если есть совпадение то
             // присваиваем всем елементам новые значения из валью
-            const todoEl = e.target.closest("div");
+            const todoEl = e.target.closest(".todo-item");
             const editTable = todoEl.querySelectorAll(".editable");
             todo.title = todoEl.querySelector(".titleTodo").value;
             todo.description = todoEl.querySelector(".description").value;
