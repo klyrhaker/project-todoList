@@ -5,7 +5,7 @@ let active = null;
 
 //создаем метод возврата копии state
 const getState = () => {
-  return state;
+  return [...state];
 };
 
 //создаем метод добавления проекта в state

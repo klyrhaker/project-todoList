@@ -1,10 +1,7 @@
 //функция создания проекта принимающая его название
-export function createProject(name) {
+export function createProject(name, id = crypto.randomUUID()) {
   //сохжаем хранилище для будущих туду
   let arr = [];
-
-  //создаем уникальный id
-  const id = crypto.randomUUID();
 
   //создаем метод добавления туду в хранилище если его там нет
   const addTodo = (todo) => {
